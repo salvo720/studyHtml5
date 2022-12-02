@@ -17,15 +17,109 @@
 </head>
 
 <body>
-    <div class="container" id="id_div_demo">
+
+    <h2> 02 sintassi di base  </h2>
+
+    <!-- 
+        02 Sintassi di base :
+        21) Struttura di un elemento    
+        22) Elementi annidati 
+        23) Elementi block e inline 
+        24) Elementi vuoti
+        25) Attributi degli elementi 
+        26) Virgolette 
+        27) Anatomia documento HTML 
+        28) Inclduere caratteri speciali
+        29) Commenti 
+
+     -->
+
+    
+     <!-- 21) Struttura di un elemento : 
+    un elemento ha un tag di apertura e uno di chiusura , i tag vanno sempre chiusi      -->
+
+    <p> Questo e un paragrafo </p>
+
    
+    <!-- 22) Elementi annidati : 
+        in html gli elmenti possono essere annidati , ovvero uno dentro l'altro 
+        formattando bene il codice e possibile intuire subito la gerarchia degli elementi e dove si chiudono 
+    -->
+
+    <div>
+        <p> <strong> Questo e </strong> un paragrafo </p>
+    </div>
+
+
+    <!-- 23) Elementi block e inline : 
+    in html ci sono 2 tipi di elemnti :
+    2) block : occupa una riga 
+    2) inline : occupa una parte di una riga 
+
+    -->
+
+    <strong> first</strong> <a> second </a> <i> third </i>
+
+    <p> p fourth</p>
+    <p> p fiveth </p>
+    <p> p sixth </p>
+
+    
+    <!-- 24) Elementi vuoti : 
+    alcuni elemnti sono vuoti ovvero non hanno il tag di chiusura ad esempio il tag img ,
+     questo perche img e un elemento void , cioe non ha bisogno di un contenuto e quindi un tag di chiusura -->
+
+     <img src="https://picsum.photos/300/600?random=1" alt="randomimg">
+
+     
+     <!-- 25) Attributi degli elementi : 
+        gli attributi degli elementi sono delle informazioni aggiuntive che andiamo a 
+        dare all'elemento per fargli fare determinate cose o per dargli un comportamento aggiuntivo  -->
+
+        <img src="https://picsum.photos/300/600?random=1">
+        <!-- src e l'attributo ovvero sorce dell'immagine  -->
+
+    
+        <!-- 26) Virgolette : 
+    possiamo travare elementi con le virgolette , come ad esempio :  -->
+    <img src='https://l'apostrofos/300/600?random=1'>
+    <!-- questo link non esiste https://l , perche la virgoletta ' interrompe l'attributo indicando la fine , 
+        per evitare questo problema e consigliato usare sempre i doppi apici quando si apre un attributo  -->
+        <img src="https://l'apostrofos/300/600?random=1">
+    
+    
+        <!-- 27) Anatomia documento HTML :   -->
+        <!-- <!DOCTYPE html> : e un refuso storico per come funzionava html 20 anni fa  -->
+        <!-- <html> : che indica dove inizia e finisce l'html  -->
+        <!-- <head> : testa del documento con informazioni extra che non vengono mostrati a schermo , l'unica cosa che viene mostrato e il titolo , 
+            i meta tag che servono per il motoro di ricerca ed altro , i link allo style css , esempio il colore dello sfondo ecc  -->
+        <!-- <body> : nel body ci sta il corpo della pagina -->
+
+    
+    <!-- 28) Inclduere caratteri speciali :
+         ci sono alcuni caratteri speciali come & , < , > , ecc ... ,  alcuni caratteri potrebbero non essere riconosciuti dalla pagina ,
+          in questo caso andiamo ad usare l'entita , se abbiamo un problema con un carattere speciale ci basta cercare asci code html , da 
+          cui ricaveremo una tabella con i caratteri speciali , prediamo il valuore html ( quello con & e ; alla fine e lo usiamo ) , 
+          e consigliabile usare direttamente il carattere speciale perche il piu delle volte non ricorda a cosa equivalgono le entita  ,
+           ad esempio &amp;
+        -->
+
+        <p> esempio : apostrofo &amp; & < > </p>
+    
+    
+    <!-- 29) Commenti :
+        i commenti sono nel documento html ma non vengono visualizzati nella pagina  
+     -->
+
+
+    <div class="container" id="id_div_demo">
+
     </div>
 
     <!-- {{-- jquery 3.6 cdn --}} -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- {{-- bootstrap 4 js cdn  --}} -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <!-- @yield('scripts') -->
     <!-- <script src="./07_Dates_DateFormats.js"></script> -->
