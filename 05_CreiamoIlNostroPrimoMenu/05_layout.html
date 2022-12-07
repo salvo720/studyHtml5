@@ -32,6 +32,223 @@
         57) Link email 
      -->
 
+    <!--  51) che cosa e un hyperlink ?  : 
+        un hyperlink o link , e cio che rende il web possibile , e sono dei collegamneti a risorse , file , video , ecc .... 
+        come e fatto un link ? 
+        un link e un elemento html , con tag <a></a> , con all'interno l'href , ovvero il riferimento della fonte a cui andiamo o da cui prendiamo la risorsa 
+    -->
+
+    <a href="https://www.google.it/"> Google </a>
+
+    <br>
+
+
+    <!-- 52) Anatomia di un link , href , title  -->
+    <!-- e prefiribile aggiungere sempre un title al nostro tag a , e preferito anche dai motori di ricerca , per l'indicizzazione  -->
+    <a href="https://www.google.it/" title="questo e un link a google"> Google </a>
+
+    <br>
+
+    <!-- link su un immagine  -->
+    <a href="https://www.google.it/"> <img src="img/Golden_star.png" alt="" style="max-width: 100px;"> </a>
+
+
+    <!-- 53) Url e percorsi (sporstarsi di cartelle ) :
+        Url : un url e una risorsa esterna nel web , un sito e un url , 
+        Risorsa : una risolsa interna e un path o percorso 
+
+        cartella root : la pagina dove si trova il file index.html , o il file html che stiamo eseguendo si chiama root , in qusto caso 05_layout.html ,
+         ovvero e la radice da cui parte tutto 
+
+         per spostarci su un altra pagina sullo stesso livello ci basta inserirla semplicemente nell'href 
+    -->
+
+    <!-- pagina nella cartalla della root  -->
+    <br>
+    <a href="test.html"> test </a>
+
+    <br>
+
+    <!-- pagina in un altra cartalla della root  -->
+    <a href="test/test2.html"> test2 </a>
+
+
+    <br>
+
+    <!-- pagina in una cartella , dentro la sottocartella  -->
+    <a href="test/sottocartella/test3.html"> test3 </a>
+
+
+    <!-- i due punti dentro un href indicano che stiamo tornando indietro nelle risorse del sito , guarda sulla pagina test2   -->
+    <!-- <a href="../05_layout.html"> 05_layout </a> -->
+
+
+    <!-- 54) Link interni di pagina : 
+    i document fragments sono i link interni nella stessa pagina , nell'esempio sotto andiamo al paragrafo 7 tramite un link 
+
+    <a href="../05_layout.html#paragrafo7"> 05_layout </a> : se aggiungiamo #id ,ad un link di una pagina , in questo caso 
+    #paragrafo7 possiamo passare direttamente all'elemento 7 di quella pagina , assicurati che l'id sia presente 
+
+    -->
+    <br>
+    <a href="#paragrafo7" title="vai al paragrafo 7 "> Vai al paragrafo 7 </a>
+
+    <h1> Titolo </h1>
+
+    <h3> Titolo Paragrafo 1</h3>
+    <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+        ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+        publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+        ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+        publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+
+    <h3> Titolo Paragrafo 2</h3>
+    <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+        ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+        publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+        ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+        publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+
+    <h3> Titolo Paragrafo 3</h3>
+    <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+        ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+        publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+        ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+        publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+
+    <h3> Titolo Paragrafo 4</h3>
+    <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+        ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+        publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+        ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+        publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+
+    <h3> Titolo Paragrafo 5</h3>
+    <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+        ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+        publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+        ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+        publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+
+    <h3> Titolo Paragrafo 6</h3>
+    <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+        ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+        publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+        ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+        publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+
+    <h3 id="paragrafo7"> Titolo Paragrafo 7</h3>
+    <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+        ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+        publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+        ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+        publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+
+    <h3> Titolo Paragrafo 8</h3>
+    <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+        ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+        publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+        ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+        publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+
+
+    <!-- 55) Url ( o percorsi ) relativi e assoluti  -->
+
+    <!-- percorso assoluto : nel percorso assoluto , diamo il percorso per intero ed include : 
+        il dominio (parte dopo http:// ) ( 127.0.0.1 che in questo caso e localhost ) , e poi il percorso del file ( studyHtml5/05_CreiamoIlNostroPrimoMenu/05_layout.html )
+
+    -->
+    <a href="http://127.0.0.1/studyHtml5/05_CreiamoIlNostroPrimoMenu/05_layout.html"></a>
+
+    <!-- carichera di default il file l'index.html  , questo andra sul sito su cui eravavo gia ed e inutile , e meglio usare i percorsi ed 
+    eseguire un href sulla pagina idex.html ( in questo caso 05_layout.html )
+
+    il percorso e relativo alla posizione in cui si trova il link  , per questo il link <a href="../../05_layout.html"> 05_layout </a> , 
+    funziona e invece <a href="../05_layout.html"> 05_layout </a> non funziona , perche scendiamo solo di una cartella
+    invece che di due partendo dal file test3.html 
+
+    Nota il link sopra , e quello assoluto , la differneza tra il percorso relativo e il percorso assoluto e che il percoso assoluta punta direttamente 
+    il dominio piu tutto il resto del percorso , invece il percorso relativo dipende in base a dove si trova la pagina , e consigliato usare i percorsi relativi 
+    invece degli assoluti , facendo pero attenzione a quando muoviamo le pagine in altre cartelle 
+    -->
+    <a href="http://127.0.0.1"> Home </a> 
+
+
+    <!-- 56) Creiamo il nostro primo menu  : 
+    creaimo il nostro primo menu mettendo un ul su tutte le pagina per il memneto usando solo html va bene
+    ma non e una soluzione perche non e scalabile e cambiando il link di una pagina , dobbiamo cambiarli tutti a mano 
+    -->
+
+    <ul>
+        <li><a href="05_layout.html"> Home</a></li>
+        <li><a href="menuTest/about.html"> About </a></li>
+        <li><a href="menuTest/contatti.html"> Contatti </a></li>
+    </ul>
+
+
+    <!-- 57) Link email : 
+        Potrebbe capitare che premendo contattaci , ci fa mandare un email , come si fa ? 
+        in pratica e un link , con href = mailto : destinatario , quelli dopo il ? sono parametri aggiuntivi , guarda l'esempio sotto : 
+    -->
+
+    <a href="mailto:recipient@email.com?body=Message%20body%20text%20"> Contacci con una mail </a>
+
 
     <!-- {{-- jquery 3.6 cdn --}} -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
