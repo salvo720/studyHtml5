@@ -9,18 +9,23 @@
     <meta name="description" content="The Mdn Learning area aims to provide 
     complete beginners to the web with all they need to know to get 
     started with developing a website and applications ">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
 
     <!-- 33) Differenza tra titolo head e body : titolo dell'head  -->
     <title> 03 il tag head nel dettaglio  </title>
 
+    <!-- meta data facebook  -->
     <meta name="og:image" content="https://developer.cdn.mozzilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="og:title" content="Mozzilla Developer Network ">
     <meta name="og:description" content="The Mdn Learning area aims to provide 
     complete beginners to the web with all they need to know to get 
     started with developing a website and applications ">
 
-    <link type="text/css" rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <!-- link per l'icon  -->
+    <link rel="shortcut icon" href="./favicon/faviconStar.ico" type="image/x-icon">
+
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -49,8 +54,36 @@
 
     <h1> Titolo contenuto pagina </h1>
 
-    <!-- 34) Cosa sono i meta  -->
+    <!-- 34) Cosa sono i meta :  
+        i meta sono i metadati , ovverro dei dati aggiuntivi che andiamo a dare  : 
+        <meta charset="UTF-8">  : definisce il tipo di caratteri che andiamo ad utilizzare 
+         <meta name="author" content="Chris Mills"> : name indica il tipo di metadato e content e il dato effettivo che vogliamo passare 
 
+
+         metadata facebook : 
+         <meta name="og:image" content="https://developer.cdn.mozzilla.net/static/img/opengraph-logo.dc4e08e2f6af.png"> : quando condividiamo un link , ci msotra un immagine 
+         <meta name="og:description" content="The Mdn Learning area aims to provide 
+         complete beginners to the web with all they need to know to get 
+         started with developing a website and applications "> : quando condiviamo un link , ci mostra una descrizione 
+         <meta name="og:title" content="Mozzilla Developer Network "> : quando condiviamo un link , ci mostra un titolo 
+
+    -->
+
+    <!-- 35) Icona personalizzata al sito : 
+        <link rel="shortcut icon" href="./favicon/faviconStar.ico" type="image/x-icon"> : per aggiungere un icon al nostro sito , usiamo questo tag link  
+        
+    -->
+
+    <!-- 36) Aggiungere css e javascript alla pagina : 
+        possiamo aggiungere css e javascript sia sull'head che sul body , per ottimizzare il sito css nell'head e  javascript si aggiunge in fondo al body , 
+        possiamo scrivere codice nella stessa pagina :
+        1) css tra i tag <style></style>  
+        2) javascript tra i tag <script></script> 
+        aggiungere un file: 
+        1) css con il tag : <link type="text/css" rel="stylesheet" href="css/style.css">
+        2) js con il tag : <script src="script.js"></script>
+        
+    -->
 
 
     <!-- {{-- jquery 3.6 cdn --}} -->

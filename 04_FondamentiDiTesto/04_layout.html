@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<!-- l'attributo lang del tag html viene usato per essere indicizzato dal motore di ricerca per la lingua  -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Chris Mills">
+    <meta name="description" content="The Mdn Learning area aims to provide 
+    complete beginners to the web with all they need to know to get 
+    started with developing a website and applications ">
+
+    <!--  Differenza tra titolo head e body : titolo dell'head  -->
+    <title> 04 Fondamenti di testo in Html : intestazione , paragrafi e formattazione </title>
+
+    <!-- link per l'icon  -->
+    <link rel="shortcut icon" href="./favicon/faviconStar.ico" type="image/x-icon">
+
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <!-- 
+        04 Fondamenti di testo :
+        41) Intestazione e paragrafi 
+        42) Perche ci serve una struttura ? Perche una semantica ?
+        43) Liste : puntature e numerate 
+        44) Liste annidate 
+        45) Formattazione testo : enfasi <em> ed importanza <strong>  
+        46) Note su italic <i> , Bold <b> e underline <u>
+     -->
+
+    <!-- 41) Intestazione e paragrafi : 
+        Qaundo scriviamo possiamo usare delle intestazione , e sono di 6 tipi , si riconoscono perche hanno h nel tag e sono : h1,h2,h3,h4,h5,h6 .
+        La grandezza va dal piu grande h1 ad h6 il piu piccolo . 
+        h1 : Titolo della pagina 
+        h2 : Sottotiolo della pagina 
+        h3 : Titoli dei paragrafi 
+        gli ultimi 3 difficilmete si useranno , i primi 3 sono i importanti 
+        h4 ,  h5 , h6 ;   
+         
+     -->
+
+
+    <!-- 42) Perche ci serve una struttura ? Perche una semantica ? 
+        Teoricamente potremmo fare tutto con span o con p , ma perche allora dobbiamo usare una struttra e la mentica ? 
+        Ci serve innanzitutto a noi che sviluppiamo il sito , per far capire la struttura e il codice a chi legge  , 
+        inoltre vengono usati dai motori di ricerca , per indicizzare la pagina 
+     -->
+
+    <!-- 43) Liste : puntature e numerate  
+        ci sono 2 tipi di liste : 
+        1) puntate : puntate perche sono liste non ordine con il tag <ul> , perche la ul significa unorder list 
+        2) numerato : numerate perche sono liste oridnate con il tag <ol> , perche la ol significa order list  
+     -->
+
+    <!-- esempio liste puntate : 
+        ul indica la lista , 
+        li indica l'elemento , perche li significa list item 
+     -->
+
+    <ul>
+        <li>a</li>
+        <li>s</li>
+        <li>d</li>
+        <li>f</li>
+    </ul>
+
+    <ol>
+        <li>a</li>
+        <li>s</li>
+        <li>d</li>
+        <li>f</li>
+    </ol>
+
+    <!-- 44) Liste annidate : 
+        le liste annidate sono liste dentro le liste 
+     -->
+
+    <ul>
+        <li>a</li>
+        <li>s</li>
+        <li>d</li>
+        <li> sottolista
+            <ul>
+                <li>sottolista1</li>
+                <li>sottolista2</li>
+                <li>sottolista3</li>
+                <li>sottolista4</li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- 45) Formattazione testo : enfasi <em> ed importanza <strong>  : 
+        per andare a dare un enfasi ad una particolare parola o testo , andiamo ad usare em , invece per dare il grassetto al testo usiamo il tag strong , 
+        aiutano chi legge la pagina , non hanno altri scopi 
+    -->
+
+    <p> <strong> Lorem </strong> ipsum dolor sit amet consectetur adipisicing elit. Recusandae repellendus, maiores ducimus expedita atque sapiente
+        necessitatibus facilis voluptas, minima, inventore nam consequuntur!
+        Iure <em>veritatis</em> optio commodi rem nulla excepturi facere!
+    </p>
+
+
+    <!-- 46) Note su italic <i> , Bold <b> e underline <u> : 
+        questi tag sono nati con html , quando ancora css non era abbastanza sviluppato , per sopperire alla formattazionedel testo . 
+        i tag sono 3 : 
+        1) <i> : testo in italic , come per il tag <em>  per dare enfasi
+        2) <b> : testo in grassetto , come per il tag <strong> per il grassetto
+        3) <u> : testo sottolineato , e scongliato dalla documentazione , perche si da per scontato che sia un link 
+        questi 3 tag sono solo per chi legge , quindi non hanno effetto sul motore di ricerca .
+        E preferibile usare enfasi <em> e grassetto <strong> perche hanno effetto anche sul motore di ricerca 
+            
+    -->
+
+    <i> Testo paragrafo </i>
+    <b> Testo paragrafo </b>
+    <u> Testo paragrafo </u>
+
+    <!-- {{-- jquery 3.6 cdn --}} -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- {{-- bootstrap 4 js cdn  --}} -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- @yield('scripts') -->
+    <!-- <script src="./07_Dates_DateFormats.js"></script> -->
+
+</body>
+
+
+</html>
