@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="it">
+<!-- l'attributo lang del tag html viene usato per essere indicizzato dal motore di ricerca per la lingua  -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Chris Mills">
+    <meta name="description" content="The Mdn Learning area aims to provide 
+    complete beginners to the web with all they need to know to get 
+    started with developing a website and applications ">
+
+    <!--  Differenza tra titolo head e body : titolo dell'head  -->
+    <title> 05 Creiamo il nostro primo menu , Hyperlink , Url , percorsi ecc... </title>
+
+    <!-- link per l'icon  -->
+    <link rel="shortcut icon" href="./favicon/faviconStar.ico" type="image/x-icon">
+
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <!-- 
+        07 La struttura di un sito web  :
+        61) introduzione alla struttura  
+        62) header , navigation bar , main content  , sidebar , footer , article , section 
+        63) Contenitori non semantici : span e div 
+        64) br e hr 
+    -->
+
+    <header>
+        <h1> Header </h1>
+    </header>
+
+    <na>
+        <ul>
+            <li><a href="#"> Home </a></li>
+            <li><a href="#"> Our team </a></li>
+            <li><a href="#"> Project </a></li>
+            <li><a href="#"> Contacts </a></li>
+        </ul>
+    </na>
+
+    <main>
+        <article>
+            <h2> Head of article </h2>
+
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, ducimus sed? Vitae, commodi unde quia 
+                delectus quisquam quis vel asperiores id nulla sapiente natus assumenda in totam iste officiis earum?
+            </p>
+
+            <h3> Subsection </h3>
+
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, ducimus sed? Vitae, commodi unde quia </p>
+
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, ducimus sed? Vitae, commodi unde quia </p>
+
+            <h3> Another Subsection </h3>
+
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, ducimus sed? Vitae, commodi unde quia </p>
+
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, ducimus sed? Vitae, commodi unde quia </p>
+
+        </article>
+
+        <aside>
+            <h2> Reload </h2>
+
+            <ul>
+                <li><a href="#"> O i do like to be beside the seaside </a></li>
+                <li><a href="#"> O i do like to be beside the seaside </a></li>
+                <li><a href="#"> Altrought in the Nord of England </a></li>
+                <li><a href="#"> It never stop raining </a></li>
+                <li><a href="#"> Oh well ..... </a></li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <footer>
+        <p> @Copyright 2050 by nobody . All rights reversed </p>
+    </footer>
+
+
+    <!-- {{-- jquery 3.6 cdn --}} -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- {{-- bootstrap 4 js cdn  --}} -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- @yield('scripts') -->
+    <!-- <script src="./07_Dates_DateFormats.js"></script> -->
+
+</body>
+
+
+</html>

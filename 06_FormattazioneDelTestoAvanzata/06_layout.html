@@ -80,7 +80,7 @@
             Aliquid molestiae nihil quam quis iste quidem, consectetur ad. Saepe mollitia, possimus ab exercitationem
             culpa reprehenderit nulla repudiandae quas minima debitis adipisci!
         </q>
-    <!-- citations : 
+        <!-- citations : 
          e l'autore della citazione e in sostanza mette il testo nel formato italic     
     -->
         <cite> autore della citazione </cite>
@@ -95,7 +95,97 @@
      -->
 
 
-     <!-- 63) Abbreviazioni -->
+    <!-- 63) Abbreviazioni : 
+        usando il tag abbr , quello contenuto nell'attributo title sara visto all'hover dell'elemnto ( passandoci sopra ) , 
+     -->
+    <h3> Abbreviazioni </h3>
+    <abbr title="Hypertext Markup Language"> HTML </abbr>
+
+
+    <!-- 65) Informazioni di contatto  -->
+    <!-- informazioni di contatto :
+        il tag address   aggiunge solo italic , ma vengono utilizzati dai motori di ricerca , migliorando la struttura del codice , rispetto ad un div  
+     -->
+    <address>
+        <p>
+            Chris Mills <br>
+            Manchester <br>
+            The Grim North <br>
+            UK <br>
+        </p>
+
+        <ul>
+            <li> Tel : 0123456789 </li>
+            <li> Email : me@grim-north.co.uk </li>
+        </ul>
+
+    </address>
+
+
+    <!-- 64) Superscript e subscript : 
+        Superscript e subscript ci permettono di scrivere nella parte inferiore o superiore di una riga , puo essere utilizzato , +
+        per rappresentazioni matematiche come ad esempio x alla seconda , o per formule chimiche 
+        Superscript : per la parte superiore di una riga 
+        Subscript : per la parte inferiore di una riga 
+    -->
+
+    <h3> Superscript e Subscript </h3>
+
+    <!-- Superscript -->
+    x<sup>2</sup> <br>
+
+    <!-- Subscript -->
+    C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub> <br> 
+
+
+    <!-- 66) Rappresentazione del codice  
+        per rappresentare il codice usiamo diversi tag :
+        <pre> : mantiene la tabulazione del codice 
+        <code> : cambia il font a monospace , questo font fa riferimento al codice  
+        <var> : ci mette in italic una variabile 
+        <kbd> : kbd sta per keyboardord e ci permette di mandare a schermo i tasti della tastiera , in relata fa la stessa cosa 
+        di code ovvero mette i caratteri su monospace ma per la semantica e meglio usare kbd 
+        <samp> : ci permette di mandare a schermo cio che viene scritto sul terminale , e molto simile 
+    --> 
+    <h3> Rappresentazione del codice </h3>
+    <pre>
+        <code>
+            var para = document.querySelector('p');
+
+            para.onclick = function (){
+                alert('ciao')
+            }
+        </code>
+    </pre>
+
+    <code>
+        var para = document.querySelector('p');
+
+        para.onclick = function (){
+            alert('ciao')
+        }
+    </code>
+
+    <p> Usate sempre la variabile <var> pippo </var> quando fate degli esempi </p>
+
+    <p> premete sulla tastiera <kbd> CTRL </kbd> / <kbd> CMD </kbd> + <kbd> A </kbd> . </p>
+
+    <pre>
+        <samp> 
+            Ping mozzilla.org(63.245.215.20) 56 data bytes 
+            64 bytes from 63.245.215.20 : icmp_seq_0 ttl=440 time=158.223 ms 
+         </samp>
+    </pre>
+
+
+    <!-- 67) Tempo e date : 
+        visto che ci sono vari formati per la data , se vogliamo aggiungere una data in html , ci basta inserire dentro il tag <time> l'attributo datetime 
+        con all'interno la data es : 2021-01-03 , nel seguente formato yyyy-mm-dd , il attributo datetime viene indicizzato dai motori di ricerca ,
+
+    -->
+    <h3>Tempo e date </h3>
+    <time datetime="2021-01-03"> 03 Gennaio 2021 </time>
+
 
 
 
