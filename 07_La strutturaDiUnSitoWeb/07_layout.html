@@ -11,7 +11,7 @@
     started with developing a website and applications ">
 
     <!--  Differenza tra titolo head e body : titolo dell'head  -->
-    <title> 05 Creiamo il nostro primo menu , Hyperlink , Url , percorsi ecc... </title>
+    <title> 07 La struttura di un sito web  </title>
 
     <!-- link per l'icon  -->
     <link rel="shortcut icon" href="./favicon/faviconStar.ico" type="image/x-icon">
@@ -23,10 +23,23 @@
 <body>
     <!-- 
         07 La struttura di un sito web  :
-        61) introduzione alla struttura  
-        62) header , navigation bar , main content  , sidebar , footer , article , section 
-        63) Contenitori non semantici : span e div 
-        64) br e hr 
+        71) introduzione alla struttura  
+        72) header , navigation bar , main content  , sidebar , footer , article , section 
+        73) Contenitori non semantici : span e div 
+        74) br e hr 
+    -->
+
+    <!-- 71) introduzione alla struttura   -->
+    <!-- 72) header , navigation bar , main content  , sidebar , footer , article , section 
+    header : zona in cui di solito ci sta un richiamo ai social , header e un contenitore semantico per avere il titolo di pagina 
+    navigaton bar : o piu coumunemente navbar , menu di navigazione alle pagine del sito 
+    main content : dove andiamo ad inserire il contenuto principale del sito 
+    sidebar : barra latererale nel main content 
+    footer : 
+    article : usato se si fa un blog , con all'interno la semntatica di un blog 
+    section : usate principlamnete nelle landing page (pagine uniche ) , cosa fa la nostra azienda ,  con cosa offriamo , il prezzo , ecc ..... 
+
+    la seguente struttura non e obbligatoria ,  ma e buona norma seguirla perche da una strattura al codice 
     -->
 
     <header>
@@ -46,7 +59,7 @@
         <article>
             <h2> Head of article </h2>
 
-            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, ducimus sed? Vitae, commodi unde quia 
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, ducimus sed? Vitae, commodi unde quia
                 delectus quisquam quis vel asperiores id nulla sapiente natus assumenda in totam iste officiis earum?
             </p>
 
@@ -81,6 +94,38 @@
     <footer>
         <p> @Copyright 2050 by nobody . All rights reversed </p>
     </footer>
+
+
+    <!-- 73) Contenitori non semantici : span e div  
+        span e div dei contenitori non semantici , ovvero non significano niente , ma sono strautilizzati ,
+         vanno usati solo quando non riusciamo a trovare una semnatica migliore , altrimenti dovremmo quasi sempre aggiungere degli id 
+         o della classi ai div o span 
+        span : e un eleemnto inline , ovvero con display inline , quindi nella stessa linea 
+        div : e un elemento a blocco , ovverro con display block , quindi nel nuovo blocco 
+    -->
+
+
+    <!-- 74) br e hr : 
+        br : significa line breaker , ovverro interruttore di linea , quando abbiamo un elemento con tatno testo per andare a capo ci basta fare <br>
+        hr : e un line breaker con l'aggiunta di una linea 
+    -->
+
+    <article>
+        <code> br </code>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br>
+            Expedita voluptas sunt in eum minus, amet culpa ab facilis hic. Commodi vitae non, rerum <br>
+            veritatis praesentium alias quidem facilis iste minus? <br> 
+        </p>
+
+        <code> hr </code>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. <hr>
+            Expedita voluptas sunt in eum minus, amet culpa ab facilis hic. Commodi vitae non, rerum <hr>
+            veritatis praesentium alias quidem facilis iste minus? <hr> 
+        </p>
+    </article>
+
 
 
     <!-- {{-- jquery 3.6 cdn --}} -->
