@@ -11,7 +11,7 @@
     started with developing a website and applications ">
 
     <!--  Differenza tra titolo head e body : titolo dell'head  -->
-    <title> 07 La struttura di un sito web  </title>
+    <title>   08 Lavorare con le immagini in Html , problemi copyright ecc ...  </title>
 
     <!-- link per l'icon  -->
     <link rel="shortcut icon" href="./favicon/faviconStar.ico" type="image/x-icon">
@@ -22,7 +22,7 @@
 
 <body>
     <!-- 
-        08 La struttura di un sito web  :
+        08 Lavorare con le immagini in Html , problemi copyright ecc ...  :
         81) Come inserire le immagini 
         82) Src stessa cartella , sottocartella , link esterno 
         83) Questione copyright 
@@ -31,6 +31,85 @@
         86) Titolo immagini
         87) Usare figure <figure> e figure captions <figcaptions>
     -->
+
+    <!-- 81) Come inserire le immagini : 
+        per inserire un immagine ci basta usare il tag <img> e l'attributo src , che sara la posizione dell'immagine 
+    -->
+
+    <img src="img/Golden_star.png" alt="">
+
+    <!-- 82) Src stessa cartella , sottocartella , link esterno  -->
+
+    <!-- stessa cartella -->
+    <!-- <img src="Golden_star.png" alt=""> -->
+
+    <!-- sottocartella , e il piu usato , tutte le img dentro una cartella -->
+    <img src="img/Golden_star.png" alt="">
+
+    <!-- link esterno : non e una buona patrica mettere dentro un src un link esterno per 2 motivi : 
+        1) stiamo creando una richiesta su quel server per recupare l'immagine andando ad intasare di traffico 
+        2) non e performante , richiedera di piu prendere l'immagine da un link esterno invece dobbiamo scaricarla e metterla il una cartella locale ,
+         dove avra un impatto minore il caricamento 
+     -->
+    <img src="https://picsum.photos/200/300" alt="">
+
+
+    <!-- 83) Questione copyright : 
+        sulle immagini esiste il copyright , quidni se non si e il propietario di quell'immagine possiamo :
+        1) richiedere il premesso scritto di usare quell'immagine 
+        2) acquistare quell'immagine e quindi anche il suo copyright diventandone i propietari ad esempio su shutterstock , link (https://www.shutterstock.com/it/images)
+        
+        se usiamo un immagine senza averne il copyright , puo arrivare una richeista di risarcimento 
+    -->
+
+
+    <!-- 84) Attributo alt ( alternative text ) : 
+    l'attribtu alt del tag img , idnica alternative text , ed e il testo che viene mostrato nel caso in cui l'immagine non viene caricata ,
+     ad esempio nel caso in cui le immagine siano disabilitate nel browser , connessione lenta ecc ... 
+    -->
+
+
+    <!-- 85) Dimensioni immagine : 
+        nel tag img possiamo moficare tramite gli attributi width ed height la gradeza di un immagine  
+        non e consigliato usare gli attributi width ed height per modificare la grandezza di un immagine , invece e consigliato usare css  
+
+       
+     -->
+
+    <img src="img/Golden_star.png" alt="Golden_star" width="200" height="300" title=" golder start png fantastic ">
+
+
+    <!-- 86) Titolo immagini :
+         in un immagine possiamo usare l'attributo title , che e il testo che viene mostrato all'over sull'immagine 
+     -->
+
+    <img src="img/Golden_star.png" alt="Golden_star" width="200" height="300" title=" golder start png fantastic ">
+
+
+
+    <!-- 87) Usare figure <figure> e figure captions <figcaptions> : 
+           il tag figure e figcaption , vengono usati inseme per aggiungere una descrizione all'immagine , 
+           figure:  e il tag principale che contiene il tag img e figcaption
+           figcaption : e il tag della descrizione all'interno di figure 
+
+           ad esempio su wikepedia quando ci sono le immagine e i testi descrittivi sotto 
+    -->
+
+    <figure>
+        <img src="img/Golden_star.png" alt="Golden_star" width="200" height="300" title=" golder start png fantastic ">
+        <figcaption> golder start png fantastic </figcaption>
+    </figure>
+
+    <!-- possiamo ottenere lo stesso risultato anche con i tag div e p : la differenza e piu a livello sintattico e di strattura , notiamo subito 
+    che figure contiene un immagine e una descrizione , invece di div che fanno lo stesso pero a livello di leggibilita e preferibile usare figure  -->
+
+    <div>
+        <img src="img/Golden_star.png" alt="Golden_star" width="200" height="300" title=" golder start png fantastic ">
+        <p> golder start png fantastic </p>
+    </div>
+
+
+
 
 
     <!-- {{-- jquery 3.6 cdn --}} -->
