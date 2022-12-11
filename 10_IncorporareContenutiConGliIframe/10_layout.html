@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+<!-- l'attributo lang del tag html viene usato per essere indicizzato dal motore di ricerca per la lingua  -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Chris Mills">
+    <meta name="description" content="The Mdn Learning area aims to provide 
+    complete beginners to the web with all they need to know to get 
+    started with developing a website and applications ">
+
+    <!--  Differenza tra titolo head e body : titolo dell'head  -->
+    <title> 10 Incorporare Contenuti con gli iframe </title>
+
+    <!-- link per l'icon  -->
+    <link rel="shortcut icon" href="./favicon/faviconStar.ico" type="image/x-icon">
+
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <!-- 
+        10 Incorporare Contenuti con gli iframe  : 
+        101) Iframe nel dettaglio 
+        102) Sicurezza , https , ecc
+        103) Elementi <embed> e <object>
+        104) Quando si usa flashplayer e JRE
+    -->
+
+    <!-- 101) Iframe nel dettaglio :
+        gli iframe ci permettono di icorpare parti del web presi da altri , 
+        non li linkiamo ma li incorporiamo nella nostra pagina , erano usano negli anni 90 e 2000 , ma adesso sono in via di disuso , 
+        restano ancora sui video di youtube e maps  
+        un iframe non e altro che un tag iframe con un paio di attributi . 
+        gli attributi sono : 
+        src : ovvero la source la fonte 
+        frameboader : e 0 di default e significa che non hanno frameboarder , bordo intorno all'iframe , puoi assegnargli il valore 1 per vederlo 
+        allowfullscreen : se usiamo degli iframe che consento di usare il fullscreen , e permette di usare l'ifrmae in fullscreeen 
+        allow : allow contiene un paio di elemnti aggiunti da youtube in questo caso : l'accellerometro , l'autoplay , giroscopio , ecc....
+        sandbox : e importante a livello di sicurezza perche blocca la possibili di eseguire codice esterno da parte dell'utente . 
+    -->
+
+
+    <!-- ifrmae video youtube  -->
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/j6c2J1hQSy8" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen sandbox>
+
+        <p> il tuo browser non supporta gli iframe </p>
+    </iframe>
+
+    <iframe src="https://developer.mozilla.org/en-US/docs/Glossary" width="100%" height="500" frameborder="0" allowfullscreen sandbox>
+        <p>
+            <a href="/en-US/docs/Glossary"> Fallback link for browser that not support iframes </a>
+        </p>
+    </iframe>
+
+
+    <!-- 102) Sicurezza , https , ecc : 
+        il problema degli iframe e che permettevano agli hacker o cracker di utilizzare codice , come javascript , usare form , ecc ... , 
+        rendendoli pericolosi per la sicruezza , quindi per far restare il nostro sito sicuro usiamo iframe di terze parti che so conoscono e che 
+        sono sicuri . 
+        sandbox e utili a livello di sicurezza perche blocca la possibili di eseguire codice esterno da parte dell'utente . 
+        usare https su un ifrmae e importate perche ci permette di rendere il sito sicuro , perche evita che qualcusno posso mettere 
+        mano al codice dell'iframe prima che i dati arrivino al sito 
+    -->
+
+
+    <!--   103) Elementi <embed> e <object>  : 
+        embed e object sono 2 tag per inserire un elemento estenro al nostro sito , in realta oggi si usa solo l'iframe  
+    -->
+
+    <embed src="whoosh.swf" quality="medium" bgcolor="#ffffff" width="550" height="400" name="whoosh" align="middle" 
+    allowScriptAccesso="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="https://www.macromedia.com/go/getflashplayer">
+
+
+    <!-- oggi non e piu necessario installare un plugin per i pdf  perche i browser supportano i pdf 
+        e quindi ci consentono di aprirli su una nuova scheda  
+    -->
+    
+    <object data="mypdf.pdf" type="applciation/pdf" width="800" height="1200" typemustmatch>
+        <p> You don't have a pdf plugin , but you can 
+            <a href="#"> download the pdf file </a>
+        </p>
+    </object>
+
+    
+    <!--  104) Quando si usa flashplayer e JRE : 
+        negli anni 90 fino agli anni 2000 , si doveva isntallare adobe flash player o jre perche alcuni sito li richiedevano per far girare elementi multimediale , 
+        oggi con l'avvento e l'evoluzione tecnologica non e piu necessario usare tecnologie del genere , dal 2021 adobe flash player sara tolto . 
+    -->
+
+
+    <!-- {{-- jquery 3.6 cdn --}} -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- {{-- bootstrap 4 js cdn  --}} -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- @yield('scripts') -->
+    <!-- <script src="./07_Dates_DateFormats.js"></script> -->
+
+</body>
+
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<!-- l'attributo lang del tag html viene usato per essere indicizzato dal motore di ricerca per la lingua  -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Chris Mills">
+    <meta name="description" content="The Mdn Learning area aims to provide 
+    complete beginners to the web with all they need to know to get 
+    started with developing a website and applications ">
+
+    <!--  Differenza tra titolo head e body : titolo dell'head  -->
+    <title>   11 Come inserire delle svg in html </title>
+
+    <!-- link per l'icon  -->
+    <link rel="shortcut icon" href="./favicon/faviconStar.ico" type="image/x-icon">
+
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <!-- 
+        11 Come inserire delle svg in html  : 
+        111) Immagine Vettorial Scalare 
+        112) Differenza tra immagine rasterizzata e vettorializzata 
+        113) Aggiungiamo svg alla nostra pagina con <img> : pro e contro 
+        114) Aggiungiamo svg alla pagina con <svg> : pro e contro 
+    -->
+
+
+    <!-- 113) Aggiungiamo svg alla nostra pagina con <img> : pro e contro 
+    
+    Pro : 
+    - sintassi img con attributo alt disponibile 
+    - facile aggiungere link  inserendo l'immagine in <a>
+    - si puo fare la cache dell'immagine per migliorare la velocita di caricamento della pagina  
+    
+    Contro: 
+    - Non possiamo manipolare l'immagine con JS 
+    - Se vogliamo controllare l'immagine con CSS dobbiamo per forza includerlo nel codice dell'SVG 
+    - Non possiamo usare pseudo classi CSS
+
+    -->
+
+
+    <!-- 114) Aggiungiamo svg alla pagina con <svg> : pro e contro 
+    
+    PRO :
+    - avere gia l'SVG nel codice riduce il tempo di caricamento 
+    - Possiamo usare classi e id per usare CSS 
+    - Possiamo utilizzare pseudo classi 
+
+    CONTRO : 
+    - Se usiamo l'SVG in un solo posto va bene , altrimenti dobbiamo duplicarla e mantenerla
+    - Il codice Svg puo essere lungo e aumentare la grandezza della pagina 
+    - L'elemento SVG non puo finire in cache 
+    - Alcuni vecchi browser non le supportano dovendo creare metodi di fallback che non giustificano il lavoro 
+
+    -->
+
+
+
+
+    <!-- {{-- jquery 3.6 cdn --}} -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- {{-- bootstrap 4 js cdn  --}} -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- @yield('scripts') -->
+    <!-- <script src="./07_Dates_DateFormats.js"></script> -->
+
+</body>
+
+
+</html>

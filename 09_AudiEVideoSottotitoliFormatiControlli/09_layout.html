@@ -30,6 +30,70 @@
         95) Aggiungere sottotitoli ad un video 
     -->
 
+
+    <!-- 91) Elemento <video> -->
+    <video src="video/DesktopRegister.mp4" controls width="600" height="300">
+        <p> Il tuo borwser non supporta i video html5 , ecco il link per vederlo su youtube </p>
+    </video>
+
+
+    <!-- 92) Lavorare con piu formati : 
+        visto che ogni browser ha un formato specifico ottimizzato  , per le risorse di tipo video ,
+        possiamo usare il tag source e specificare ogni formato per far si che ogni borwser visualizzi il video ,
+        l'attributo type non e obbligatorio ma e meglio metterlo . 
+     -->
+
+    <video  controls width="600" height="300">
+        <source src="video/DesktopRegister.mp4" type="video/mp4">
+        <source src="video/DesktopRegister.webm" type="video/webm">
+        <p> Il tuo borwser non supporta i video html5 , ecco il link per vederlo su youtube </p>
+    </video>
+
+
+    <!-- 93) Altre caratteristiche di <video> : width , height , autoplay , loop , muted , poster 
+    i seguenti attributi fanno parte del tag video : 
+    width : modifica la grandezza del video 
+    height : modifica l'altezza del video   
+    autoplay : ci permette di far partire in automatico il video 
+    loop : ci permette di far andare avanti il video all'infinito 
+    muted : ci permette di mutare l'audio 
+    poster : ci permette di mettere una miniatura 
+
+    -->
+
+    <video  controls width="600" height="300" autoplay loop muted>
+        <source src="video/DesktopRegister.mp4" type="video/mp4">
+        <source src="video/DesktopRegister.webm" type="video/webm">
+        <p> Il tuo borwser non supporta i video html5 , ecco il link per vederlo su youtube </p>
+    </video>
+
+
+
+    <!-- 94) Elemento <audio> (no dimensioni , no poster ) : 
+        l'audio e simile ad video , la differenza e il formato del player , inoltre non ha le dimensioni e i poster ,
+        per il resto l'audio si comporta come il video     
+    -->
+    <audio controls>
+        <source src="audio/audio1.mp3">
+        <source src="audio/audio1.ogg">
+        <p> il tuo browser non supporta l'audio html5 </p>
+    </audio>
+
+    <!-- 95) Aggiungere sottotitoli ad un video:
+        per aggiungere i sottotitoli ad un video ci basta aggiungere il tag track , 
+        mettiamo l'attributo kind ( ovvero tipo ) , che puo essere di tipo : subtitles , caption , ecc.. 
+        aggiungiamo nell'attributo src il file subtitles_it.vtt ( .vtt )
+    -->
+
+    <video  controls width="600" height="300" >
+        <source src="video/DesktopRegister.mp4" type="video/mp4">
+        <source src="video/DesktopRegister.webm" type="video/webm">
+        <p> Il tuo borwser non supporta i video html5 , ecco il link per vederlo su youtube </p>
+        <track kind="subtitles" src="sottotitoli/subtitles_it.vtt" srclang="it"></track>
+    </video>
+
+
+
  
 
     <!-- {{-- jquery 3.6 cdn --}} -->
