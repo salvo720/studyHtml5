@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<!-- l'attributo lang del tag html viene usato per essere indicizzato dal motore di ricerca per la lingua  -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Chris Mills">
+    <meta name="description" content="The Mdn Learning area aims to provide 
+    complete beginners to the web with all they need to know to get 
+    started with developing a website and applications ">
+
+    <!--  Differenza tra titolo head e body : titolo dell'head  -->
+    <title> 12 Come avere le immagini Responsive </title>
+
+    <!-- link per l'icon  -->
+    <link rel="shortcut icon" href="./favicon/faviconStar.ico" type="image/x-icon">
+
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <!-- 
+        12 - Come avere le immagini Responsive  : 
+        1) Cosa sono le immagini resposive e perche usarle 
+        2) esempi su come usarle 
+        3) Usare piu formati 
+    -->
+
+    <!-- 1) Cosa sono le immagini resposive e perche usarle  : 
+        le immagini responsive consistono nell'usare immagini con risoluzione diversa in base allo schermo , caricando piu immagini di risoluzione diversa , 
+        e mettendoli dentro il tag picture 
+    -->
+
+
+    <!-- 2) esempi su come usarle  -->
+
+    <!-- <img src="img/backgorund_NewYork.jpg" alt="backgorund_NewYork" width="300" height="200"> -->
+
+    <!-- il tag picutre ci permette di usare i differenti formati per le immagini e renderle responsive .
+         Picture necessita dell'immagine di base , indicata con il tag img , e l'immagine che viene visualizzata se ci sono problemi ,
+        poi possiamo aggiungere i tag source , con 2 attributi : 
+        1) media : fa riferimento alle mediaquery css , quindi ci basta specificare il massimo dello schermo 
+        2)src con il path dell'immagine  -->
+    <div class="containerImage">
+        <picture>
+            <source media="(max-width:480px)" srcset="img/backgorund_NewYork480.jpg" width="480">
+            <source media="(max-width:800px)" srcset="img/backgorund_NewYork800.jpg" width="800">
+            <source media="(max-width:1920px)" srcset="img/backgorund_NewYork1920.jpg" width="1200">
+            <img src="img/backgorund_NewYork.jpg" alt="backgorund_NewYork" width="1200" height="1080">
+        </picture>
+    </div>
+
+    <!-- 3) Usare piu formati  -->
+
+    <!-- picture ci permette di lavorare oltre che che con immagini di dimensioni diverse anche con fromati diversi , 
+        facendo in modo che sia il borwser a cariacare l'immagine ottimizzata per il suo formato  -->
+
+    <!-- formato webp : il formato webp e stato creato da google , quindi sugli altri browser non e ottimizzato  -->
+    <picture>
+        <source type="image/svg+xml" srcset="img/backgorund_NewYork480.svg">
+        <source type="image/webp" srcset="img/backgorund_NewYork800.webp">
+        <source type="image/jpg" srcset="img/backgorund_NewYork480.jpg">
+        <img src="img/backgorund_NewYork.jpg" alt="backgorund_NewYork" width="1200" height="1080">
+    </picture>
+
+
+    <!-- {{-- jquery 3.6 cdn --}} -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- {{-- bootstrap 4 js cdn  --}} -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- @yield('scripts') -->
+    <!-- <script src="./07_Dates_DateFormats.js"></script> -->
+
+</body>
+
+
+</html>
