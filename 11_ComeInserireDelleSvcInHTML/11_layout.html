@@ -11,7 +11,7 @@
     started with developing a website and applications ">
 
     <!--  Differenza tra titolo head e body : titolo dell'head  -->
-    <title>   11 Come inserire delle svg in html </title>
+    <title> 11 Come inserire delle svg in html </title>
 
     <!-- link per l'icon  -->
     <link rel="shortcut icon" href="./favicon/faviconStar.ico" type="image/x-icon">
@@ -44,6 +44,15 @@
 
     -->
 
+    <!--  inseriamo l'svg dentro il tag img  -->
+    <img src="img/rectangle.svg" alt="circle" height="200" width="300">
+
+    
+    <!--  usiamo il tag svg , e successivamnete dobbiamo disegnare noi l'svg  -->
+    <svg height="200" width="300" >
+        <rect width="100%" height="100%" fill="green">
+    </svg>
+
 
     <!-- 114) Aggiungiamo svg alla pagina con <svg> : pro e contro 
     
@@ -59,6 +68,27 @@
     - Alcuni vecchi browser non le supportano dovendo creare metodi di fallback che non giustificano il lavoro 
 
     -->
+
+    <!-- 111) Immagine Vettorial Scalare : 
+         e utili in diverse circostanze , hanno un piccolo small size file , 
+        quindi occupano poco e sono altamente scalabili e non diventano pixelate . 
+    -->
+
+
+
+    <!-- 112) immagine rasterizzata e vettorializzata 
+        Immagine Vettoriale :
+        fanno parte delle immagini vettoriale i formati : bmp , png , jpg , gif 
+        possiamo dire che queste immaggini si adattano alla grandezza che gli diamo , quindi sia con uno zoom normale , 
+        che quello in cui lo zoom e aumentato (quindi l'immagine e piu grande ) , vengono aggiunti dei pixel dinamicamente , 
+        perche non hanno un numero di pixel fisso , ma hanno semplicemnte dei punti da tracciare  
+
+        Immagine Rasterizzata : 
+        Gli altri tipi di immagini hanno sempre lo stesso numero di pixel , sia a zoom normale che a zoom aumentato   (quindi l'immagine e piu grande ) , 
+        ma quando lo zoom aumenta , l'immagine inizia a sfogarsi perche i pixel non cambiano  
+
+     -->
+
 
 
 
