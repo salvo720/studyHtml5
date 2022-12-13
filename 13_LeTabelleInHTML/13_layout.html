@@ -11,67 +11,280 @@
     started with developing a website and applications ">
 
     <!--  Differenza tra titolo head e body : titolo dell'head  -->
-    <title> 12 Come avere le immagini Responsive </title>
+    <title> 13 - Le tabelle in HTML </title>
 
     <!-- link per l'icon  -->
     <link rel="shortcut icon" href="./favicon/faviconStar.ico" type="image/x-icon">
 
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
-    <style>
-        .containerImage{
-            height: 300px;
-        }
-        div>picture>img {
-            width: 100%;
-        }
-    </style>
 </head>
 
 <body>
     <!-- 
-        12 - Come avere le immagini Responsive  : 
-        1) Cosa sono le immagini resposive e perche usarle 
-        2) esempi su come usarle 
-        3) Usare piu formati 
+        13 - Le tabelle in HTML   : 
+        1) Introduzione 
+        2) Non usare le tabelle come layout  
+        3) la nostra prima tabella
+        4) Aggiungiamo i nomi dei campi con th 
+        5) Espandere le celle su piu righe e colonne 
+        6) stile comune colonna ( border , background , width , visibility )
+        7) Aggiungere descrizione alla tabella con <caption>
+        8) Diamo una struttura con un <thead> , <tbody> e <tfoot> 
+        9) Innestare tabelle 
     -->
 
-    <!-- 1) Cosa sono le immagini resposive e perche usarle  : 
-        le immagini responsive consistono nell'usare immagini con risoluzione diversa in base allo schermo , caricando piu immagini di risoluzione diversa , 
-        e mettendoli dentro il tag picture 
+
+    <!-- 1) Introduzione  : 
+        le tabelle vengono usate per mostrare dati e sono fondamentali 
     -->
 
+    <!-- 2) Non usare le tabelle come layout  : 
+        non usare le tabelle come layout ma solo per mostrare dei dati , un sito fato con una tabella come layout non ha una struttura 
+    -->
 
-    <!-- 2) esempi su come usarle  -->
+    <!-- 3) la nostra prima tabella : 
+        per usre una tabella ci basta usare il tag :
+        <table> : tag contenitore della tabella
+        <tr> : indica table row , e sara la riga di una tabella 
+        <th> : significa table header e indica head di una colonna 
+        <td> : indica la cella di una colonna 
+    -->
 
-    <!-- <img src="img/backgorund_NewYork.jpg" alt="backgorund_NewYork" width="300" height="200"> -->
+    <table>
+        <tr>
+            <td>01-01-2022</td>
+            <td> 12€</td>
+        </tr>
+        <tr>
+            <td>02-01-2022</td>
+            <td> 20€</td>
+        </tr>
+        <tr>
+            <td>10-01-2022</td>
+            <td> 35€</td>
+        </tr>
+    </table>
+    <br>
 
-    <!-- il tag picutre ci permette di usare i differenti formati per le immagini e renderle responsive .
-         Picture necessita dell'immagine di base , indicata con il tag img , e l'immagine che viene visualizzata se ci sono problemi ,
-        poi possiamo aggiungere i tag source , con 2 attributi : 
-        1) media : fa riferimento alle mediaquery css , quindi ci basta specificare il massimo dello schermo 
-        2)src con il path dell'immagine  -->
-    <div class="containerImage">
-        <picture>
-            <source media="(max-width:480px)" srcset="img/backgorund_NewYork480.jpg" width="480">
-            <source media="(max-width:800px)" srcset="img/backgorund_NewYork800.jpg" width="800">
-            <source media="(max-width:1920px)" srcset="img/backgorund_NewYork1920.jpg" width="1200">
-            <img src="img/backgorund_NewYork.jpg" alt="backgorund_NewYork" width="1200" height="1080">
-        </picture>
-    </div>
 
-    <!-- 3) Usare piu formati  -->
+    <!-- 4) Aggiungiamo i nomi dei campi con th : 
+        nota il primo tag tr della tabella che contiene i th , table header per le celle 
+    -->
 
-    <!-- picture ci permette di lavorare oltre che che con immagini di dimensioni diverse anche con fromati diversi , 
-        facendo in modo che sia il borwser a cariacare l'immagine ottimizzata per il suo formato  -->
+    <table>
+        <tr>
+            <th> Data </th>
+            <th> Importo </th>
+        </tr>
+        <tr>
+            <td>01-01-2022</td>
+            <td> 12€</td>
+        </tr>
+        <tr>
+            <td>02-01-2022</td>
+            <td> 20€</td>
+        </tr>
+        <tr>
+            <td>10-01-2022</td>
+            <td> 35€</td>
+        </tr>
+    </table>
+    <br>
 
-    <!-- formato webp : il formato webp e stato creato da google , quindi sugli altri browser non e ottimizzato  -->
-    <picture>
-        <source type="image/svg+xml" srcset="img/backgorund_NewYork480.svg">
-        <source type="image/webp" srcset="img/backgorund_NewYork800.webp">
-        <source type="image/jpg" srcset="img/backgorund_NewYork480.jpg">
-        <img src="img/backgorund_NewYork.jpg" alt="backgorund_NewYork" width="1200" height="1080">
-    </picture>
+
+    <!-- 5) Espandere le celle su piu righe e colonne : 
+        per espandere una cella su piu righe o colonne ci bata usare : 
+        rowspan : per le righe 
+        colspan : per le colonne 
+    -->
+
+    <table>
+        <tr>
+            <th> Data </th>
+            <th> Importo </th>
+        </tr>
+        <tr>
+            <td colspan="2"> Effettuato il reso </td>
+        </tr>
+        <tr>
+            <td>02-01-2022</td>
+            <td> 20€</td>
+        </tr>
+        <tr>
+            <td rowspan="3">10-01-2022</td>
+            <td> 35€</td>
+        </tr>
+        <tr>
+            <td> 35€</td>
+        </tr>
+        <tr>
+            <td> 35€</td>
+        </tr>
+    </table>
+    <br>
+
+
+    <!-- 6) stile comune colonna ( border , background , width , visibility ) : 
+        tramite l'attributo colgroup possiamo modificare lo stile di una tabella , la sintassi e :
+        <colgroup>
+            <col>  
+            <col> 
+        </colgroup> 
+
+        <col> : : indica tutta la colonna 
+
+        con col possiamo modificare : 
+        1) bordo
+        2) background
+        3) width
+        4) visibility
+    -->
+    <table>
+        <colgroup>
+            <col>
+            <col class="colAcqua">
+        </colgroup>
+        <tr>
+            <th> Data </th>
+            <th> Importo </th>
+        </tr>
+        <tr>
+            <td>02-01-2022</td>
+            <td> 20€</td>
+        </tr>
+        <tr>
+            <td rowspan="3">10-01-2022</td>
+            <td> 35€</td>
+        </tr>
+        <tr>
+            <td> 35€</td>
+        </tr>
+        <tr>
+            <td> 35€</td>
+        </tr>
+    </table>
+    <br>
+
+
+    <!-- 7) Aggiungere descrizione alla tabella con <caption> : 
+        per aggiungere la descrizione a una tabella ci basta usare il tag <caption>
+    -->
+
+    <table>
+        <caption> Spese mensili gennaio </caption>
+        <tr>
+            <th> Data </th>
+            <th> Importo </th>
+        </tr>
+        <tr>
+            <td>02-01-2022</td>
+            <td> 20€</td>
+        </tr>
+        <tr>
+            <td rowspan="3">10-01-2022</td>
+            <td> 35€</td>
+        </tr>
+        <tr>
+            <td> 35€</td>
+        </tr>
+        <tr>
+            <td> 35€</td>
+        </tr>
+    </table>
+    <br>
+
+
+    <!-- 8) Diamo una struttura con un <thead> , <tbody> e <tfoot> : 
+        <thead> : e la table head , dove mettiamo solitamente un tr , con dentro i th che sono i nomi delle colonne ,
+        potremmo avere anche dei filtri , allarga tabella a tutto schermo , il numero di item per pagina   
+        <tfoot> : e la riga finale di una tabella , puo essere messo isa prima che dopo il tag body , ma quando html 
+        costruirà la tabella sara sempre visualizzato sotto il tag tbody , potremmo avere anche i tasti della paginazione 
+
+        usiamo i tag thead , tbody e tfoot per dare una struttra alla tabella e renderla piu leggibile pensa ad esempio a tebelle grandi , 
+        inoltre per poter modificare lo stile della tabella usando questi tag  come selettori 
+    -->
+
+    <table>
+        <caption> Spese mensili settembe </caption>
+        <thead>
+            <tr>
+                <th> Oggetto</th>
+                <th> Data </th>
+                <th> Luogo </th>
+                <th> Costo (€) </th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="3"> Importo totale </td>
+                <td> 48 € </td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td> Spesa settimanale </td>
+                <td> 01-09-2022 </td>
+                <td> Supermercato </td>
+                <td> 30€ </td>
+            </tr>
+            <tr>
+                <td> Lampada da tavolo </td>
+                <td> 12-09-2022 </td>
+                <td> Amazon </td>
+                <td> 18€ </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+
+
+    <!-- 9) Innestare tabelle : 
+        Innestare le tabelle e sconsigliato , ci sono altri modi per ottenere il risultato  , se si puo e meglio evitarlo 
+    -->
+
+    <table>
+        <caption> Spese mensili settembe </caption>
+        <thead>
+            <tr>
+                <th> Oggetto</th>
+                <th> Data </th>
+                <th> Luogo </th>
+                <th> Costo (€) </th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="3"> Importo totale </td>
+                <td> 48 € </td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td> Spesa settimanale </td>
+                <td> 01-09-2022 </td>
+                <td> Supermercato </td>
+                <td> 30€ </td>
+            </tr>
+            <tr>
+                <td> <table>
+                    <tr> 
+                        <td> ciao</td>
+                        <td> ciao</td>
+                        <td> ciao</td>
+                        <td> ciao</td>
+                        <td> ciao</td>
+                        <td> ciao</td>
+                        <td> ciao</td>
+                    </tr>
+                </table> </td>
+                <td> 12-09-2022 </td>
+                <td> Amazon </td>
+                <td> 18€ </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
 
 
     <!-- {{-- jquery 3.6 cdn --}} -->
