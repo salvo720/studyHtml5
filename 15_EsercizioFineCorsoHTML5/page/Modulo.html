@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="it">
+<!-- l'attributo lang del tag html viene usato per essere indicizzato dal motore di ricerca per la lingua  -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Chris Mills">
+    <meta name="description" content="The Mdn Learning area aims to provide 
+    complete beginners to the web with all they need to know to get 
+    started with developing a website and applications ">
+
+    <!--  Differenza tra titolo head e body : titolo dell'head  -->
+    <title> 15 - Esercizio di fine corso Html5 </title>
+
+    <!-- link per l'icon  -->
+    <link rel="shortcut icon" href="./favicon/faviconStar.ico" type="image/x-icon">
+
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
+</head>
+
+<body>
+    <!-- 
+        15 - Esercizio di fine corso Html5   : 
+       
+    -->
+
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../15_layout.html"> Home </a></li>
+                <li><a href="Modulo.html"> Modulo </a></li>
+                <li><a href="Tabella.html"> Tabella </a></li>
+            </ul>
+        </nav>
+
+        <h1>Modulo</h1>
+    </header>
+
+    <main>
+
+       <form action="save.php">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" placeholder="inserirsci il nome" required>
+        <br>
+
+        <label for="Cognome">Cognome</label>
+        <input type="text" name="Cognome" placeholder="inserirsci il cognome" disabled>
+        <br>
+       
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="inserirsci la mail" required>
+        <br>
+       
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="inserirsci la password" required>
+        <br>
+        
+        <label for="note"> Note </label>
+        <textarea name="note" id="" cols="30" rows="10"></textarea>
+        <br>
+
+        <label for="genere">Genere</label>
+        <input type="Radio" name="genere">Maschio
+        <input type="Radio" name="genere">Femmina
+        <br>
+
+
+        <label for="DataDiNascita">Data Di Nascita</label>
+        <input type="date">
+        <br>
+
+        <label for="macchinaPreferita"> Macchina Preferita : </label>
+        <input type="text" list="idMacchina">
+        <datalist id="idMacchina">
+            <option value="Volvo">
+            <option value="Fiat">
+            <option value="BMV">
+        </datalist>
+
+        <label for="macchinaPreferita2">Macchina Preferita 2 : </label>
+        <select name="macchinaPreferita2" id="">
+            <option value="Volvo">Volvo</option>
+            <option value="Tesla">Tesla</option>
+            <option value="Mercedes">Mercedes</option>
+            <option value="Audi">Audi</option>
+        </select>
+
+        <br>
+
+        <input type="checkbox" name="newLetter" id="idNewsLetter">
+        <label for="idNewsLetter"> Iscriviti alla news letter </label>
+        <br><br>
+        
+        <button type="Submit" value="Submit"> Submit </button>
+        <button type="Reset" value="Reset"> Reset </button>
+
+
+    </form>
+    </main>
+
+
+
+    <!-- {{-- jquery 3.6 cdn --}} -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- {{-- bootstrap 4 js cdn  --}} -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- @yield('scripts') -->
+    <!-- <script src="./07_Dates_DateFormats.js"></script> -->
+
+</body>
+
+
+</html>
