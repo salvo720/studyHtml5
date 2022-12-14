@@ -11,7 +11,7 @@
     started with developing a website and applications ">
 
     <!--  Differenza tra titolo head e body : titolo dell'head  -->
-    <title> 13 - Le tabelle in HTML </title>
+    <title> 14 - From , input , checkbox , radio, bottoni , ecc... </title>
 
     <!-- link per l'icon  -->
     <link rel="shortcut icon" href="./favicon/faviconStar.ico" type="image/x-icon">
@@ -48,23 +48,208 @@
 
     <!-- 3) Input , label , select ( multiple ) , textarea , button    : 
         Input : e un campo in cui possiamo inserire del testo 
-        label : 
-        select :
-        textarea : 
-        button :
+        
+        label : e un campo di descrizione dell'input , usa l'attributo for che fa riferimento all'attributo name del tag input , 
+        quindi for e name devono coincidere 
+
+        Select : e un campo dove si puo scegliere tra delle opzioni , puo anche essere lasciato vuoto ad esempio quando 
+        non si seleziona nulla e si sceglie la voce seleziona .
+        
+        attributo multiple nel select : per selezione piu option in un select ci basta usare il multiple nel tag select ,
+         e quando selezioniamo ci basta tenere premtu ctrt 
+        
+        Textarea : la textarea viene usata quando abbiamo la necessita di scrivere tanto testo , 
+        anche perche la si puo allargare premendo sul tirangolo in basso a destra 
+
+        Button : il bottone e un elemento che puoi premere 
+
+        Nota Bene : l'attributo name e fondmanetale per prendere i dati quando li passiamo 
     -->
 
+    <!-- label  -->
+    <label for="name"> name</label>
     <!-- Input -->
-    <input type="text">
+    <input type="text" name="name">
+
+    <br><br>
 
 
+    <!-- select  -->
 
-    <!-- <h1>Esempio Form </h1>
+    <select name="provinciaDiNascita" id="">
+        <option value=""> Seleziona </option>
+        <option value="MI"> Milano </option>
+        <option value="RM"> Roma </option>
+        <option value="PA"> Palermo </option>
+    </select>
+
+    <br><br>
+
+
+    <!-- select multipla -->
+
+    <select name="provinciaDiNascita" id="" multiple>
+        <option value=""> Seleziona </option>
+        <option value="MI"> Milano </option>
+        <option value="RM"> Roma </option>
+        <option value="PA"> Palermo </option>
+    </select>
+
+    <br><br>
+
+
+    <!-- textarea  -->
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+
+    <br><br>
+
+    <!-- bottone -->
+
+    <button type="button">bottone </button>
+
+    <br><br>
+
+
+    <!-- 4) Fieldset e Legend  : 
+        Filedset : e un container con dentro i campi 
+        Legend : e il titolo del container 
+
+
+        usando filedset e legend insieme andiamo a creare un contenitore intotolato 
+    -->
+
+    <fieldset>
+        <legend> Prova </legend>
+    </fieldset>
+
+
+    <!-- 5) Datalist : 
+        una datalist e un elenco di suggerimenti , per quel campo , si aggiunge l'attributo list al campo input , 
+        e che fara riferimento al campo di id del tag datalist , un datalist all'itnerno avra deglio option che
+        sono i valori che verrano mostrati e usati , a differenza del select possiamo non chiedere le i tag option all'interno 
+    -->
+
+    <input type="text" list="idNomi">
+    <datalist id="idNomi">
+        <option value="Marco">
+        <option value="Luca">
+        <option value="Andrea">
+        <option value="Antonio">
+    </datalist>
+
+
+    <!-- 6) i diversi tipi di input : text , password , submit , reset , radio , checkbox , color , date , email , file , ecc ..... 
+        text : e un type per inserire i testi 
+        password : e il type inserire le password , perche nasconde i caratteri all'utente  
+        submit : e il type per inviare il form 
+        reset : e il type per resettare tutti i campi del form 
+
+        il valore dei bottoni di tipo submit e reset e non viene usato nel form 
+
+        radio : e il type per scegliere un valore  tra due o piu valori , entrambe le option della radiobox 
+        devono fare riferimento allo stesso nome  
+       
+        checkbox : e il type per scegliere uno o piu valori tra due o piu valori 
+        color : e il type per scegliere il colore del testo 
+        date : e il type per le date 
+        email : e il type che controlla se abbiamo inserito un email corretta 
+        file : e il type per aggiungere i file 
+    -->
+
+    
+    <br>
+    <!-- text -->
+    <label for="text">text</label>
+    <input type="text" name="text">
+
+    <br>
+    <!-- password -->
+    <label for="password">password</label>
+    <input type="password" name="password">
+
+    <br>
+    <!-- date -->
+    <label for="date">date</label>
+    <input type="date" name="date">
+
+
+    <!-- 7) Gli attributi degli input : checked , disabled , readonly , required , value , multiple ( file ) , placeholder ecc ....  
+        checked : si utilizza sulle checkbox e indica che e gia checcata 
+        disabled : non possiamo usare il campo perche e disabilitato , il form non ne terra conto di questo campo 
+        readonly : il campo lo vediamo ma non possiamo scrivere , il form ne terra conto 
+        required : indica che il campo e richiesto , ovvero deve essere compilato o contenere un valore 
+        value : e il valore effettivo del campo o della select che andiamo a passare alla pagina di back-end 
+        multiple : lo possiamo usare anche sui file per selezionare file multipli 
+        placeholder : e un aiuto per l'utente al campo quando e vuoto 
+
+    -->
+
+
+    <h1>Esempio Form </h1>
     <form action="salvadati.php" method="POST">
         <fieldset>
+            <legend> Dati anagrafici </legend>
+            
+            <label for="firstname"> firstname</label>
+            <input type="text" name="firstname" readonly required>
+            
+            <label for="lastname"> lastname</label>
+            <input type="text" name="lastname" disabled>
+            
+            <label for="fiscalcode"> fiscalcode</label>
+            <input type="text" name="fiscalcode" maxlength="16" placeholder="inserire il codice fiscale" required>
+            
+            <select name="provinciaDiNascita" id="" multiple>
+                <option value=""> Seleziona </option>
+                <option value="MI"> Milano </option>
+                <option value="RM"> Roma </option>
+                <option value="PA"> Palermo </option>
+            </select>
 
+            <label for="email"> email</label>
+            <input type="text" name="email" placeholder="inserisci un email valida ">
         </fieldset>
-    </form> -->
+
+
+        <fieldset>
+            <legend>Dati Secondari </legend>
+            
+            <span> Interessi</span>
+            <div>
+                <input type="checkbox" name="basket" id="idBasket" value="Basket" checked>
+                <label for="Basket"> Basket </label>
+            </div>
+            <div>
+                <input type="checkbox" name="Calcio" id="idCalcio" value="Calcio">
+                <label for="Calcio"> Calcio </label>
+            </div>
+            <div>
+                <input type="checkbox" name="Tennis" id="idTennis" value="Tennis">
+                <label for="Tennis"> Tennis </label>
+            </div>
+            
+            <br><br>
+            
+            <label for="colorePreferito"> Colore Preferito </label>
+            <input type="color" name="colorePreferito">
+            
+            <br><br>
+
+            <label for="fileAggiuntivi"> Aggiungi file </label>
+            <input type="file" multiple>
+            
+            <br><br>
+
+            <span> Genere </span>
+            <div>
+                <input type="radio" name="genere" value="M"> Maschio 
+                <input type="radio" name="genere" value="F"> Femmina 
+            </div>
+        </fieldset>
+
+        <button type="Submit" Value="Submit"> Submit </button>
+        <button type="Reset" value="Resetta"> Reset </button>
+    </form>
 
 
     <!-- {{-- jquery 3.6 cdn --}} -->
