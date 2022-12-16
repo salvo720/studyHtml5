@@ -41,66 +41,92 @@
 
     <main>
 
-       <form action="save.php">
-        <label for="nome">Nome</label>
-        <input type="text" name="nome" placeholder="inserirsci il nome" required>
-        <br>
+        <form action="save.php">
 
-        <label for="Cognome">Cognome</label>
-        <input type="text" name="Cognome" placeholder="inserirsci il cognome" disabled>
-        <br>
-       
-        <label for="email">Email</label>
-        <input type="email" name="email" placeholder="inserirsci la mail" required>
-        <br>
-       
-        <label for="password">Password</label>
-        <input type="password" name="password" placeholder="inserirsci la password" required>
-        <br>
-        
-        <label for="note"> Note </label>
-        <textarea name="note" id="" cols="30" rows="10"></textarea>
-        <br>
+            <div class="form-field">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" placeholder="inserirsci il nome" required>
+                <br>
+            </div>
+            
+            <div class="form-field">
+                <label for="Cognome">Cognome</label>
+                <input type="text" name="Cognome" id="Cognome" placeholder="inserirsci il cognome" disabled>
+                <br>
+            </div>
 
-        <label for="genere">Genere</label>
-        <input type="Radio" name="genere">Maschio
-        <input type="Radio" name="genere">Femmina
-        <br>
+            <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="inserirsci la mail" required>
+                <br>
+            </div>
+            
+            <div class="form-field">
+                <label for="password">Password</label>
+                <input type="password" name="password"  id="password" placeholder="inserirsci la password" required>
+                <br>
+            </div>
+
+            <div class="form-field">
+                <label for="note"> Note </label>
+                <textarea name="note" id="note" cols="30" rows="10"></textarea>
+                <br>
+            </div>
+
+            <div class="form-field">
+                <label for="genere">Genere</label>
+                <input type="Radio" name="genere"  id="genere">Maschio
+                <input type="Radio" name="genere"  id="genere" >Femmina
+                <br>
+            </div>
+
+            <div class="form-field">
+                <label for="DataDiNascita">Data Di Nascita</label>
+                <input type="date" name="DataDiNascita" id="DataDiNascita">
+                <br>
+            </div>
+
+            <div class="form-field">
+                <label for="macchinaPreferita"> Macchina Preferita : </label>
+                <input type="text" list="idMacchina" id="macchinaPreferita">
+                <datalist id="idMacchina">
+                    <option value="Volvo">
+                    <option value="Fiat">
+                    <option value="BMV">
+                </datalist>
+            </div>
+
+            <div class="form-field">
+                <label for="macchinaPreferita2">Macchina Preferita 2 : </label>
+                <select name="macchinaPreferita2" id="macchinaPreferita2">
+                    <option value="Volvo">Volvo</option>
+                    <option value="Tesla">Tesla</option>
+                    <option value="Mercedes">Mercedes</option>
+                    <option value="Audi">Audi</option>
+                </select>
+                <br>
+            </div>
+
+            <div class="form-field">
+                <input type="checkbox" name="newLetter" id="newLetter">
+                <label for="newLetter"> Iscriviti alla news letter </label>
+                <br><br>
+            </div>
+
+            <!-- 2 modi per fare i bottoni del form   -->
+
+            <input type="Submit" value="Submit">
+            <input type="Reset" value="Reset">
+
+            <br><br>
+           
+
+            <button type="Submit" value="Submit"> Submit </button>
+            <button type="Reset" value="Reset"> Reset </button>
 
 
-        <label for="DataDiNascita">Data Di Nascita</label>
-        <input type="date">
-        <br>
-
-        <label for="macchinaPreferita"> Macchina Preferita : </label>
-        <input type="text" list="idMacchina">
-        <datalist id="idMacchina">
-            <option value="Volvo">
-            <option value="Fiat">
-            <option value="BMV">
-        </datalist>
-
-        <label for="macchinaPreferita2">Macchina Preferita 2 : </label>
-        <select name="macchinaPreferita2" id="">
-            <option value="Volvo">Volvo</option>
-            <option value="Tesla">Tesla</option>
-            <option value="Mercedes">Mercedes</option>
-            <option value="Audi">Audi</option>
-        </select>
-
-        <br>
-
-        <input type="checkbox" name="newLetter" id="idNewsLetter">
-        <label for="idNewsLetter"> Iscriviti alla news letter </label>
-        <br><br>
-        
-        <button type="Submit" value="Submit"> Submit </button>
-        <button type="Reset" value="Reset"> Reset </button>
-
-
-    </form>
+        </form>
     </main>
-
 
 
     <!-- {{-- jquery 3.6 cdn --}} -->
